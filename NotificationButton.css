@@ -1,0 +1,46 @@
+.container{
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.container .notify::before{
+    position: absolute;
+    content:attr(data-count) ;
+    right: -4px;
+    color: rgb(243, 247, 251);
+    padding: 10px 18px;
+    background:linear-gradient(#f50b0b, #f50b0b, #f50b0b );
+    font-size: 25px;
+    font-weight: 700;
+    border-radius: 50px;
+    box-shadow: 10px 0px 10px 0px rgb(129, 123, 123);
+    opacity:0;
+    animation: animate .9s ease-out infinite alternate;
+}
+@keyframes animate{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.09);
+    }
+}
+.notify.add-numb::before{
+    opacity: 1;
+}
+.container .btn{
+    position: absolute;
+    top: 130px;
+    left: -15px;
+    height: 40px;
+    width: 120px;
+    font-size: 15px;
+    color: azure;
+    font-weight: 700;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: #131313;
+    line-height: 100%;
+    cursor: pointer;
+}
